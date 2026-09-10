@@ -1,0 +1,20 @@
+.rentSumary{
+    /* Structural */
+    width: 15em;
+    height: 20em;
+    border: 0.5em solid rgb(255, 255, 255);
+    border-bottom-color: rgba(0, 0, 0, 0.39);
+    border-left-color: rgba(0, 0, 0, 0.39);
+    border-radius: 0.8em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(201, 188, 188);
+}
+
+.rentSumary img{
+    width: 80%;
+    height: auto;
+}

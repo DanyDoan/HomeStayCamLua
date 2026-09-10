@@ -1,0 +1,39 @@
+.card{
+    /* Structural */
+    width: 100%;
+    /* height: 50svh; */
+
+    margin: 1em;
+    border-radius: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 2em ;
+
+    /* Customize */
+    /* background-color: rgb(236, 230, 230); */
+}
+
+.card:nth-child(2n){
+    flex-direction: row-reverse;
+}
+.card .trailerPic{
+    /* Structural */
+    width: 50%;
+    background-color: white;
+    border-radius: 1em;
+}
+
+.card .contentBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card .contentBox h2{
+    width: fit-content;
+    text-transform: uppercase;
+}
