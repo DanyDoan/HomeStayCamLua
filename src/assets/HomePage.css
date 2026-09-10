@@ -1,39 +1,304 @@
-.card{
-    /* Structural */
-    width: 100%;
-    /* height: 50svh; */
+/* ============================================================
+   HOME PAGE — Hero, Features, Room Preview Cards
+   ============================================================ */
 
-    margin: 1em;
-    border-radius: 1em;
-    padding: 1em;
-    box-sizing: border-box;
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 85svh;
     display: flex;
-    flex-direction: row;
-    gap: 2em ;
-
-    /* Customize */
-    /* background-color: rgb(236, 230, 230); */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--color-primary-dark);
 }
 
-.card:nth-child(2n){
-    flex-direction: row-reverse;
-}
-.card .trailerPic{
-    /* Structural */
-    width: 50%;
-    background-color: white;
-    border-radius: 1em;
-}
-
-.card .contentBox{
+.hero-image {
+    position: absolute;
+    inset: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.72;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(30, 46, 30, 0.65) 0%,
+        rgba(45, 74, 45, 0.3) 50%,
+        rgba(200, 168, 75, 0.15) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    max-width: 800px;
+    animation: heroFadeIn 1s ease-out both;
+}
+
+@keyframes heroFadeIn {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content .hero-eyebrow {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent-gold);
+    background: rgba(200, 168, 75, 0.15);
+    border: 1px solid rgba(200, 168, 75, 0.4);
+    border-radius: 2rem;
+    padding: 0.3rem 1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero-content h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.25;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.hero-content h2 span {
+    color: var(--color-accent-gold);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: var(--spacing-lg);
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2.2rem;
+    background-color: var(--color-accent-gold);
+    color: var(--color-primary-dark);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    min-height: 52px; /* 60+ UX: large target */
+    box-shadow: 0 4px 16px rgba(200, 168, 75, 0.4);
+}
+
+.hero-cta:hover {
+    background-color: #d4b655;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(200, 168, 75, 0.5);
+}
+
+/* --- Features Strip --- */
+.features {
+    padding: var(--spacing-xl) 2rem;
+    background-color: var(--color-bg-warm);
+}
+
+.features-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-label {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-label h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--color-primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.section-label p {
+    color: var(--color-text-mid);
+    font-size: 1rem;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.feature-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 2px 12px var(--color-shadow);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px var(--color-shadow);
+    border-color: var(--color-primary-light);
+}
+
+.feature-card .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    display: block;
+}
+
+.feature-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    font-size: 0.92rem;
+    color: var(--color-text-mid);
+    line-height: 1.7;
+}
+
+/* --- Room Preview (Cards) Section --- */
+.rooms-preview {
+    padding: var(--spacing-xl) 2rem;
+    background-color: #eee9dc; /* slightly warmer than bg-warm */
+}
+
+.rooms-preview .section-label {
+    margin-bottom: var(--spacing-lg);
+}
+
+.rooms-list {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    gap: var(--spacing-lg);
 }
 
-.card .contentBox h2{
-    width: fit-content;
-    text-transform: uppercase;
+/* --- Card Component (alternating layout) --- */
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--color-bg-card);
+    box-shadow: 0 4px 20px var(--color-shadow);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: 0 8px 32px rgba(45, 74, 45, 0.22);
+    transform: translateY(-3px);
+}
+
+.card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.card .trailerPic {
+    width: 48%;
+    min-height: 320px;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+}
+
+.card .contentBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-lg);
+    gap: var(--spacing-sm);
+}
+
+.card .contentBox h2 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--color-primary-dark);
+    text-transform: none;
+}
+
+.card .contentBox p {
+    font-size: 1rem;
+    color: var(--color-text-mid);
+    line-height: 1.8;
+}
+
+.card .card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: var(--spacing-xs);
+    padding: 0.7rem 1.5rem;
+    background-color: var(--color-primary-mid);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    align-self: flex-start;
+    min-height: 48px;
+}
+
+.card .card-cta:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero { min-height: 55vh; }
+
+    .card,
+    .card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .card .trailerPic {
+        width: 100%;
+        min-height: 220px;
+    }
+
+    .card .contentBox {
+        padding: var(--spacing-md);
+    }
+
+    .rooms-preview,
+    .features {
+        padding: var(--spacing-lg) 1rem;
+    }
 }

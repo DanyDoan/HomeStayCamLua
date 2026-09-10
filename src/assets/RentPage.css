@@ -1,20 +1,157 @@
-.rentSumary{
-    /* Structural */
-    width: 15em;
-    height: 20em;
-    border: 0.5em solid rgb(255, 255, 255);
-    border-bottom-color: rgba(0, 0, 0, 0.39);
-    border-left-color: rgba(0, 0, 0, 0.39);
-    border-radius: 0.8em;
+/* ============================================================
+   RENT PAGE — Room Cards Grid
+   ============================================================ */
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: rgb(201, 188, 188);
+/* --- Page Header --- */
+.rent-page-header {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary-mid) 100%);
+    color: var(--color-bg-warm);
+    padding: var(--spacing-lg) 2rem;
+    text-align: center;
 }
 
-.rentSumary img{
-    width: 80%;
-    height: auto;
+.rent-page-header h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: var(--color-bg-warm);
+    margin-bottom: 0.4rem;
+}
+
+.rent-page-header p {
+    font-size: 1rem;
+    color: rgba(245, 240, 232, 0.78);
+}
+
+/* --- Grid --- */
+.rent-grid-section {
+    padding: var(--spacing-xl) 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* --- Room Summary Card --- */
+.rentSumary {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 3px 16px var(--color-shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.rentSumary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 32px rgba(45, 74, 45, 0.22);
+    border-color: var(--color-primary-light);
+}
+
+.rentSumary .room-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: #d8e8d8;
+}
+
+.rentSumary .room-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.rentSumary:hover .room-image-wrap img {
+    transform: scale(1.05);
+}
+
+.rentSumary .room-type-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background-color: var(--color-accent-gold);
+    color: var(--color-primary-dark);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 2rem;
+}
+
+.rentSumary .rentSummaryContent {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.rentSumary .rentSummaryContent h2 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--color-primary-dark);
+}
+
+.rentSumary .room-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+}
+
+.rentSumary .room-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.88rem;
+    color: var(--color-text-mid);
+}
+
+.rentSumary .room-meta svg {
+    color: var(--color-primary-mid);
+    font-size: 1rem;
+}
+
+.rentSumary .room-book-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding: 0.7rem 1.2rem;
+    background-color: var(--color-primary-mid);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+    min-height: 48px;
+}
+
+.rentSumary .room-book-btn:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .rent-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rent-grid-section {
+        padding: var(--spacing-md) 1rem;
+    }
 }

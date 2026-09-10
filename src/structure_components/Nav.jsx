@@ -1,18 +1,8 @@
-import { Link } from 'react-router-dom';
-import { useTranslation } from "react-i18next";
+// Nav is now rendered inside Header.jsx as part of the unified sticky topbar.
+// This file is kept for potential future use (e.g. a separate mobile drawer nav).
 
-function Nav(){
-
-    const { t } = useTranslation();
-
-    return(
-        <nav>
-            <Link to="/" className="navBtn">{t("HomePage")}</Link>
-            <Link to="/rents" className="navBtn">{t("RentPage")}</Link>
-            <Link to="/login" className="navBtn">{t("LoginPage")}</Link>
-            <Link to="/register" className="navBtn">{t("RegisterPage")}</Link>
-        </nav>
-    )
+function Nav() {
+    return null;
 }
 
-export default Nav
+export default Nav;
