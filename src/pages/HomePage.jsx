@@ -75,7 +75,7 @@ function HomePage() {
                         🌿 {isVI ? "Chào mừng đến với" : "Welcome to"}
                     </span>
                     <h2>
-                        HomeStay <span>Cam Lụa</span>
+                        HomeStay <span>Cẩm Lụa</span>
                     </h2>
                     <p>
                         {isVI
