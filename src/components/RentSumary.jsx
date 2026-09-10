@@ -8,7 +8,7 @@ function RentSumary({rentInfor = {
 
     return(
         <div className="rentSumary">
-            <img src={`${import.meta.env.BASE_URL}${rentInfor.picUrl}`}/>
+            <img src={`https://danydoan.github.io/HomeStayCamLua/${rentInfor.picUrl}`}/>
             <div className="rentSummaryContent">
                 <h2>{rentInfor.name}</h2>
                 <p>{rentInfor.type}</p>
