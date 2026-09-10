@@ -3,12 +3,12 @@ function RentSumary({rentInfor = {
     "type": "Luxury",
     "size": "large",
     "maxPeople": 10,
-    "picUrl": "/hero.png"
+    "picUrl": "hero.png"
 }}){
 
     return(
         <div className="rentSumary">
-            <img src={rentInfor.picUrl}/>
+            <img src={`${import.meta.env.BASE_URL}${rentInfor.picUrl}`}/>
             <div className="rentSummaryContent">
                 <h2>{rentInfor.name}</h2>
                 <p>{rentInfor.type}</p>
