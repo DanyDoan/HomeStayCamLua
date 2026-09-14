@@ -11,6 +11,11 @@ import HomePage from './pages/HomePage';
 import RentPage from './pages/RentPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import ProfilePage from './pages/ProfilePage';
+
+// Context
+import AuthContext from './context/AuthContext';
+
 
 function App() {
 
@@ -23,6 +28,7 @@ function App() {
                 <Route path="/rents"    element={<RentPage />} />
                 <Route path="/login"    element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
+                <Route path="/profile"  element={<ProfilePage/>}/>
             </Routes>
             <Footer />
         </BrowserRouter>

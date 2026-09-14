@@ -4,5 +4,8 @@
     "HomePage": "Trang chủ",
     "LoginPage": "Đăng nhập",
     "RegisterPage": "Đăng ký",
-    "RentPage": "Đặt phòng"
+    "RentPage": "Xem phòng",
+    "Available": "Phòng nghỉ",
+    "Please choose the room that suits your needs.": "Lựa chọn phòng phù hợp với bạn.",
+    "Book": "Đặt phòng"
 }

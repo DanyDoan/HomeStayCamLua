@@ -1,14 +1,16 @@
 import './style.css'
 import React from 'react'
-import ReactDom from 'react-dom/client'
-
-import "./i18n";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { AuthProvider } from './context/AuthContext';
 
 import App from './App'
 
-ReactDom.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <AuthProvider>
+      <App />
+    </AuthProvider>
+  </StrictMode>
 )
 

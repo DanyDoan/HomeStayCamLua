@@ -57,7 +57,7 @@ const ROOMS = [
 ];
 
 function HomePage() {
-    const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation();
     const isVI = i18n.language === "vi" || i18n.language?.startsWith("vi");
 
     return (
@@ -82,10 +82,10 @@ function HomePage() {
                             ? "Tìm về thiên nhiên, tận hưởng không gian xanh mát và bình yên tại vùng quê."
                             : "Return to nature — enjoy a serene, green escape nestled in the heart of the Vietnamese countryside."}
                     </p>
-                    {/* <Link to="/rents" className="hero-cta" id="hero-book-btn">
+                    <Link to="/rents" className="hero-cta" id="hero-book-btn">
                         <FaBed />
                         {isVI ? "Đặt phòng ngay" : "Book a Room"}
-                    </Link> */}
+                    </Link>
                 </div>
             </section>
 

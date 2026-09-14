@@ -1,25 +1,27 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaHome, FaBed, FaSignInAlt, FaUserPlus, FaLeaf } from "react-icons/fa";
-
+import AuthContext from "../context/AuthContext";
 function Header() {
     const { i18n, t } = useTranslation();
     const [language, setLanguage] = useState("vi");
     const location = useLocation();
 
+    const { isLoading, isFail, user } = useContext(AuthContext);
+    
+    alert(JSON.stringify(user))
+    const navLinks = [
+        { to: "/", labelKey: "HomePage", icon: <FaHome /> },
+        { to: "/rents", labelKey: "RentPage", icon: <FaBed /> },
+        { to: "/login", labelKey: "LoginPage", icon: <FaSignInAlt /> },
+        { to: "/register", labelKey: "RegisterPage", icon: <FaUserPlus /> },
+    ];
+
     const handleLanguage = (lang) => {
         setLanguage(lang);
         i18n.changeLanguage(lang);
     };
-
-    const navLinks = [
-        { to: "/",         labelKey: "HomePage",    icon: <FaHome /> },
-        { to: "/rents",    labelKey: "RentPage",    icon: <FaBed /> },
-        { to: "/login",    labelKey: "LoginPage",   icon: <FaSignInAlt /> },
-        { to: "/register", labelKey: "RegisterPage", icon: <FaUserPlus /> },
-    ];
-
     return (
         <header>
             {/* Brand */}

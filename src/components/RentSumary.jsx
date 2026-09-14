@@ -1,4 +1,5 @@
 import { FaUsers, FaExpand, FaBed } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 function RentSumary({ rentInfor = {
     name: "Phòng Tre Xanh",
@@ -8,12 +9,13 @@ function RentSumary({ rentInfor = {
     picUrl: "hero.png",
 } }) {
 
+    const { i18n, t } = useTranslation();
     return (
         <article className="rentSumary">
             {/* Image */}
             <div className="room-image-wrap">
                 <img
-                    src={`https://danydoan.github.io/HomeStayCamLua/${rentInfor.picUrl}`}
+                    src={`${rentInfor.picUrl}`}
                     alt={`Phòng ${rentInfor.name}`}
                     loading="lazy"
                 />
@@ -41,7 +43,7 @@ function RentSumary({ rentInfor = {
                     aria-label={`Đặt phòng ${rentInfor.name}`}
                 >
                     <FaBed aria-hidden="true" />
-                    Đặt phòng
+                    {t("Book")}
                 </button>
             </div>
         </article>

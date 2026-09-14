@@ -4,5 +4,9 @@
     "HomePage": "Home",
     "LoginPage": "Login",
     "RegisterPage": "Register",
-    "RentPage": "Rents"
+    "RentPage": "Rents",
+    "Available": "Available",
+    "Please choose the room that suits your needs.": "Please choose the room that suits your needs.",    
+    "Book": "Book room"
+
 }
