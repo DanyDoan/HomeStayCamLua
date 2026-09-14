@@ -28,3 +28,4 @@ dist-ssr
 .src/pages/LoginPage.jsx
 .src/pages/RegisterPage.jsx
 .src/pages/ProfilePage.jsx
+.git_token
