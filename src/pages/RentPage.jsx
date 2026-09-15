@@ -9,7 +9,7 @@ const ROOMS = [
         type: "Family",
         size: "25 m²",
         maxPeople: 4,
-        picUrl: "anh1.png",
+        picUrl: "sunflower1.png",
         pics: ["sunflower1.png", "sunflower2.png", "sunflower3.png"],
         services: ["Life jackets available", "Party venue", "Free inhouse karaoke"]
 
@@ -19,7 +19,7 @@ const ROOMS = [
         type: "Couple",
         size: "40 m²",
         maxPeople: 6,
-        picUrl: "anh2.png",
+        picUrl: "summersunshine2.png",
         pics: ["summersunshine1.png", "summersunshine2.png", "summersunshine3.png"],
         services: ["Life jackets available", "Party venue"]
     }

@@ -35,7 +35,7 @@ const ROOMS = [
     {
         picUrl: "anhteam2.png",
         titleVI: "Một buổi tụ họp cuối tuần?",
-        titleEN: "A weekend gathering party",
+        titleEN: "A weekend gathering party?",
     }
 ];
 

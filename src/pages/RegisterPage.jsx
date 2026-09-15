@@ -38,6 +38,11 @@ function RegisterPage() {
         alert(JSON.stringify(response.data.message));
     };
 
+    return(
+        <main>
+            <h2>This feature is still under development</h2>
+        </main>
+    )
     return (
         <main className="auth-page">
             <div className="auth-card">

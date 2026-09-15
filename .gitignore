@@ -24,8 +24,9 @@ dist-ssr
 *.sw?
 
 # 
-.src/api/*
-.src/pages/LoginPage.jsx
-.src/pages/RegisterPage.jsx
-.src/pages/ProfilePage.jsx
+src/api/*
+# src/pages/LoginPage.jsx
+# src/pages/RegisterPage.jsx
+# src/pages/ProfilePage.jsx
 .git_token
+

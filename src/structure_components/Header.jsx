@@ -13,8 +13,8 @@ function Header() {
     const navLinks = [
         { to: "/", labelKey: "HomePage", icon: <FaHome /> },
         { to: "/rents", labelKey: "RentPage", icon: <FaBed /> },
-        { to: "/login", labelKey: "LoginPage", icon: <FaSignInAlt /> },
-        { to: "/register", labelKey: "RegisterPage", icon: <FaUserPlus /> },
+        // { to: "/login", labelKey: "LoginPage", icon: <FaSignInAlt /> },
+        // { to: "/register", labelKey: "RegisterPage", icon: <FaUserPlus /> },
     ];
 
     const handleLanguage = (lang) => {
