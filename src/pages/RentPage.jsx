@@ -7,8 +7,8 @@ const ROOMS = [
     {
         name: "Sun Flower",
         type: "Family",
-        size: "25 m²",
-        maxPeople: 4,
+        size: "50 m²",
+        maxPeople: 6,
         picUrl: "sunflower1.png",
         pics: ["sunflower1.png", "sunflower2.png", "sunflower3.png"],
         services: ["Life jackets available", "Party venue", "Free inhouse karaoke"]
@@ -17,8 +17,8 @@ const ROOMS = [
     {
         name: "Summer Sunshine",
         type: "Couple",
-        size: "40 m²",
-        maxPeople: 6,
+        size: "25 m²",
+        maxPeople: 4,
         picUrl: "summersunshine2.png",
         pics: ["summersunshine1.png", "summersunshine2.png", "summersunshine3.png"],
         services: ["Life jackets available", "Party venue"]
