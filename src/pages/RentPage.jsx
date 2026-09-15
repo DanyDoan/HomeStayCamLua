@@ -5,33 +5,24 @@ import RentSumary from "../components/RentSumary";
 // Sample room data
 const ROOMS = [
     {
-        name: "Phòng Tre Xanh",
-        type: "Phòng đôi",
+        name: "Sun Flower",
+        type: "Family",
         size: "25 m²",
-        maxPeople: 2,
+        maxPeople: 4,
         picUrl: "anh1.png",
+        pics: ["sunflower1.png", "sunflower2.png", "sunflower3.png"],
+        services: ["Life jackets available", "Party venue", "Free inhouse karaoke"]
+
     },
     {
-        name: "Phòng Lúa Vàng",
-        type: "Phòng gia đình",
+        name: "Summer Sunshine",
+        type: "Couple",
         size: "40 m²",
-        maxPeople: 5,
+        maxPeople: 6,
         picUrl: "anh2.png",
-    },
-    {
-        name: "Phòng Sen Hồng",
-        type: "Phòng đơn",
-        size: "18 m²",
-        maxPeople: 1,
-        picUrl: "anh1.png",
-    },
-    {
-        name: "Phòng Hoàng Hôn",
-        type: "Phòng đôi",
-        size: "30 m²",
-        maxPeople: 3,
-        picUrl: "anh2.png",
-    },
+        pics: ["summersunshine1.png", "summersunshine2.png", "summersunshine3.png"],
+        services: ["Life jackets available", "Party venue"]
+    }
 ];
 
 function RentPage() {

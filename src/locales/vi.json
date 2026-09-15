@@ -5,7 +5,23 @@
     "LoginPage": "Đăng nhập",
     "RegisterPage": "Đăng ký",
     "RentPage": "Xem phòng",
-    "Available": "Phòng nghỉ",
+    "Available": "Trạm dừng chân",
     "Please choose the room that suits your needs.": "Lựa chọn phòng phù hợp với bạn.",
-    "Book": "Đặt phòng"
+    "Book": "Đặt phòng",
+    "Details": "Xem chi tiết",
+    "Family": "Gia đình",
+    "Couple": "Phòng đôi",
+    "Sun Flower": "Phòng Hướng Dương",
+    "Summer Sunshine": "Phòng Nắng Hạ",
+    "Large": "Size lớn",
+    "Medium": "Size vừa",
+    "Room type": "Loại phòng",
+    "Occupancy": "Phù hợp ở",
+    "Free services": "Dịch vụ miễn phí",
+    "Life jackets available": "Sử dụng áo phao",
+    "Party venue": "Hỗ trợ nơi tổ chức tiệc",
+    "Free inhouse karaoke": "Miễn phí karaoke",
+    "Contact": "Liên hệ",
+    "For Booking": "để đặt phòng"
 }
+

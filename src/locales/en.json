@@ -6,7 +6,21 @@
     "RegisterPage": "Register",
     "RentPage": "Rents",
     "Available": "Available",
-    "Please choose the room that suits your needs.": "Please choose the room that suits your needs.",    
-    "Book": "Book room"
-
+    "Please choose the room that suits your needs.": "Please choose the room that suits your needs.",
+    "Book": "Book room",
+    "Details": "Details",
+    "Family": "Family",
+    "Couple": "Couple",
+    "Sun Flower": "Sun Flower room",
+    "Summer Sunshine": "Summer Sunshine room",
+    "Large": "Large",
+    "Medium": "Medium",
+    "Room type": "Room type",
+    "Occupancy": "Occupancy",
+    "Free services": "Free services",
+    "Life jackets available": "Life jackets available",
+    "Party venue": "Party venue",
+    "Free inhouse karaoke": "Free inhouse karaoke",
+    "Contact": "Contact",
+    "For Booking": "For Booking"
 }

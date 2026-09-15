@@ -24,12 +24,12 @@ function Footer() {
 
                     <div className="contact-item">
                         <SiZalo />
-                        <span>07XXX05YYY</span>
+                        <span>0919867770</span>
                     </div>
 
                     <div className="contact-item">
                         <FaPhoneAlt />
-                        <span>07XXX05YYY</span>
+                        <span>0919867770</span>
                     </div>
                 </div>
             </div>

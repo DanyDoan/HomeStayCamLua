@@ -38,7 +38,6 @@ function RegisterPage() {
         alert(JSON.stringify(response.data.message));
     };
 
-
     return (
         <main className="auth-page">
             <div className="auth-card">
@@ -132,6 +131,7 @@ function RegisterPage() {
             </div>
         </main>
     );
+
 }
 
 export default RegisterPage;

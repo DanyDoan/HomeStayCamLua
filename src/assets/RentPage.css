@@ -145,6 +145,97 @@
     background-color: var(--color-primary-dark);
 }
 
+.rentOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background-color: rgba(61, 60, 60, 0.856);
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.rentOverlay h2{
+    color:rgb(255, 255, 255);
+}
+.closeDetails {
+    width: fit-content;
+    height: 5%;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 7%;
+    right: 10%;
+    background-color: rgb(255, 0, 0);
+    border-radius: 30%;
+    color:rgb(253, 253, 253);
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 80%; */
+    height: 60%;
+    background-color: rgba(105, 103, 103, 0.534);
+    border: 0.5em solid  #ece6d2;
+    border-radius: 0.5em;
+
+}
+
+.rentPictures{
+    height: 100%;
+}
+
+.picNavigationBtn:nth-child(n) {
+    height: 30%;
+    width: 5%;
+    color: rgb(255, 254, 254);
+    position: absolute;
+    top: 20%;
+    left: 11%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10%;
+    transition-duration: 0.2s;
+}
+
+.picNavigationBtn:nth-child(2n) {
+    left: 84%;
+}
+
+.picNavigationBtn:hover{
+    transform: scale(1.1);
+    color: rgb(9, 243, 126);
+}
+
+
+.rentDetails {
+    width: 80%;
+    height: 20%;
+    border:0.5em solid white;
+    border-radius: 0.5em;
+    background-color: #ece6d2;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.rentDetails label {
+    font-weight: bold;
+}
+
+.rentOverlay h2:last-child{
+    background-color: rgb(241, 241, 241);
+    margin: 5px;
+    border: 0.2em solid red;
+    border-radius: 0.5em;
+    padding: 0px 10px;
+    color: red;
+}
 /* Responsive */
 @media (max-width: 640px) {
     .rent-grid {

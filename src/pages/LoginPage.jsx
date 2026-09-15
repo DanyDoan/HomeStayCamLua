@@ -11,7 +11,7 @@ function LoginPage() {
     const { i18n, t } = useTranslation();
     const isVI = i18n.language === "vi" || i18n.language?.startsWith("vi");
 
-    const {user, setUser} = useContext(AuthContext)
+    const { user, setUser } = useContext(AuthContext)
 
     const [form, setForm] = useState({ username: "", password: "" });
 
@@ -30,6 +30,7 @@ function LoginPage() {
             accessToken: response.data.accessToken
         })
     };
+
 
     return (
         <main className="auth-page">

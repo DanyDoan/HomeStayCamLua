@@ -18,7 +18,7 @@ i18n
     lng: "vi",
     fallbackLng: "vi",
     interpolation: {
-        esscapeValue: false
+        escapeValue: false
     }
 });
 
